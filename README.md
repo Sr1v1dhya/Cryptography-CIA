@@ -1,7 +1,5 @@
 # August Cipher & Custom Hash Implementation
 
----
-
 ## 1. Theory
 
 ### August Cipher
@@ -12,8 +10,8 @@ The August Cipher is a monoalphabetic substitution cipher based on the Caesar Ci
 * **Constraints:** Non-alphabetic characters (numbers, spaces, punctuation) are preserved without modification.
 
 ### Custom Hash Function
-The hashing function produces a **32-bit hash value**.. It uses:
-1. **Polynomial Bases:** A rotating set of prime bases (`17, 29, 13, 37`) to ensure that character position affects the outcome and reduce the liklihood collision.
+The hashing function produces a **32-bit hash value**. It uses:
+1. **Polynomial Bases:** A rotating set of prime bases (`17, 29, 13, 37`) to ensure that character position affects the outcome and reduce the likelihood of collisions.
 2. **Bitwise Operations:** Shifting (`<<`) and XOR (`^`) operations are applied to avoid collisions between similar strings.
 3. **Fixed-Size Output:** The result is masked to **32 bits** and formatted as an **8-character hexadecimal string**, allowing the receiver to precisely identify the hash at the end of any transmitted message.
 4. **Deterministic Output:** The same input always produces the same hash value.
@@ -23,7 +21,7 @@ The hashing function produces a **32-bit hash value**.. It uses:
 ## 2. How to Run
 
 1. **Clone the repository:**
-   Open your terminal and run:
+   * Open your terminal and run:
    ```bash
    git clone https://github.com/Sr1v1dhya/Cryptography-CIA.git
 
@@ -32,7 +30,7 @@ The hashing function produces a **32-bit hash value**.. It uses:
     cd Cryptography-CIA
 
 3. **Run the test script:**
-    **Ensure you have Python 3 installed, then execute:**
+    * Ensure you have Python 3 installed, then execute:
     ```bash
     python3 august.py
 
